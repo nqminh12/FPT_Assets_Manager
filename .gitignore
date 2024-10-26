@@ -1,0 +1,38 @@
+# 1. Thư mục ẩn của Visual Studio
+.vs/
+
+# 2. File cài đặt người dùng trong solution
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# 3. Build output - Các thư mục bin và obj (chứa file biên dịch tạm)
+bin/
+obj/
+Debug/
+Release/
+
+# 4. Thư mục tạm khi chạy ứng dụng
+*.pidb
+*.log
+*.cache
+*.pdb
+
+# 5. File của các công cụ quản lý package
+packages/
+node_modules/
+
+# 6. Thông tin của các khóa bảo mật và cài đặt môi trường
+*.config
+*.env
+secrets.json
+
+# 7. File và thư mục của hệ điều hành (Windows / macOS)
+[Dd]esktop.ini
+[Tt]humbs.db
+*.DS_Store
+
+# 8. IIS Express (nếu dùng)
+.ion/
+applicationhost.config
