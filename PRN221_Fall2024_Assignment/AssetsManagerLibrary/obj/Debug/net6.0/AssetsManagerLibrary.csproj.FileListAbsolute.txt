@@ -1,0 +1,15 @@
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\bin\Debug\net6.0\AssetsManagerLibrary.deps.json
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\bin\Debug\net6.0\AssetsManagerLibrary.runtimeconfig.json
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\bin\Debug\net6.0\AssetsManagerLibrary.dll
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\bin\Debug\net6.0\AssetsManagerLibrary.pdb
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\obj\Debug\net6.0\AssetsManagerLibrary.csproj.AssemblyReference.cache
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\obj\Debug\net6.0\AssetsManagerLibrary.GeneratedMSBuildEditorConfig.editorconfig
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\obj\Debug\net6.0\AssetsManagerLibrary.AssemblyInfoInputs.cache
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\obj\Debug\net6.0\AssetsManagerLibrary.AssemblyInfo.cs
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\obj\Debug\net6.0\AssetsManagerLibrary.csproj.CoreCompileInputs.cache
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\obj\Debug\net6.0\AssetsManagerLibrary.sourcelink.json
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\obj\Debug\net6.0\AssetsManagerLibrary.dll
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\obj\Debug\net6.0\refint\AssetsManagerLibrary.dll
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\obj\Debug\net6.0\AssetsManagerLibrary.pdb
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\obj\Debug\net6.0\AssetsManagerLibrary.genruntimeconfig.cache
+E:\FULearning\Fall2024\PRN221\Assignment\PRN221_Fall2024_Assignment\AssetsManagerLibrary\obj\Debug\net6.0\ref\AssetsManagerLibrary.dll

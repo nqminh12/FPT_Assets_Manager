@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AssetsManagerLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5737ece68c43dd68cb9c2e61b820234fd1568b7e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48aa4d27b2baf7e0f37c47afd202909766293518")]
 [assembly: System.Reflection.AssemblyProductAttribute("AssetsManagerLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AssetsManagerLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
