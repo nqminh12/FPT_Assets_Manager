@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "F9RVABkfWHj4G/voRR6eepq4ABN4XUGGcAW5CvXTblTwBoLbeB25H1889NRVYDrtuFh/4rzpkbl4gkluVlDTIg==",
+  "success": true,
+  "projectFilePath": "E:\\FULearning\\Fall2024\\PRN221\\Assignment\\PRN221_Fall2024_Assignment\\PRN221_Fall2024_Assignment\\PRN221_Fall2024_Assignment.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Fpt\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Fpt\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Fpt\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Fpt\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.29\\microsoft.netcore.app.host.win-x64.6.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}

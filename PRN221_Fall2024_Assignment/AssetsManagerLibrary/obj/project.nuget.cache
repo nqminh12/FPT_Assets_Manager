@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "fUr3yIjgvev7YoIrKSLE3d19zmHU5BYTUPCP7wuBWAwm6LAN/YQDa3QAUrKHhLnTHsMHS8ba1lTeZndk6URMmQ==",
+  "success": true,
+  "projectFilePath": "E:\\FULearning\\Fall2024\\PRN221\\Assignment\\PRN221_Fall2024_Assignment\\AssetsManagerLibrary\\AssetsManagerLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Fpt\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Fpt\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Fpt\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}

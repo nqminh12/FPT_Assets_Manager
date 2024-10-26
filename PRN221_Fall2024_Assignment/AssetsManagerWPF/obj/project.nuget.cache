@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "c0pMk1sVwYXqyaHQQ+TNJj/wNrdKW2uP8WVk3rB1xGCu6GeDG3ozls9zhVv+VBblaIuutL00CLakDwg6ES6OnQ==",
+  "success": true,
+  "projectFilePath": "E:\\FULearning\\Fall2024\\PRN221\\Assignment\\PRN221_Fall2024_Assignment\\AssetsManagerWPF\\AssetsManagerWPF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Fpt\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Fpt\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Fpt\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Fpt\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.29\\microsoft.netcore.app.host.win-x64.6.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}
