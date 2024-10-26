@@ -12,13 +12,13 @@ namespace AssetsManagerLibrary.Models
         }
 
         public int AssetId { get; set; }
+        public int? FolderId { get; set; }
         public string AssetName { get; set; } = null!;
         public string FilePath { get; set; } = null!;
         public int SizeKb { get; set; }
         public int? TypeId { get; set; }
         public int CategoryId { get; set; }
         public int? CloudId { get; set; }
-        public int? FolderId { get; set; }
         public DateTime? ImportedDate { get; set; }
 
         public virtual Category Category { get; set; } = null!;

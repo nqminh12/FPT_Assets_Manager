@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Configuration;
 
 namespace AssetsManagerLibrary.Models
 {
@@ -31,16 +30,9 @@ namespace AssetsManagerLibrary.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(GetConnectionString());
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Server=localhost;database=AssetManager;Trusted_Connection=SSPI;Encrypt=false;TrustServerCertificate=true");
             }
-        }
-
-        private string? GetConnectionString()
-        {
-            IConfiguration configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", true, true).Build();
-            return configuration["ConnectionStrings:AssetManagerDB"];
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -71,30 +63,30 @@ namespace AssetsManagerLibrary.Models
                     .WithMany(p => p.Assets)
                     .HasForeignKey(d => d.CategoryId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Assets__Category__47DBAE45");
+                    .HasConstraintName("FK__Assets__Category__45F365D3");
 
                 entity.HasOne(d => d.Cloud)
                     .WithMany(p => p.Assets)
                     .HasForeignKey(d => d.CloudId)
                     .OnDelete(DeleteBehavior.SetNull)
-                    .HasConstraintName("FK__Assets__CloudID__48CFD27E");
+                    .HasConstraintName("FK__Assets__CloudID__46E78A0C");
 
                 entity.HasOne(d => d.Folder)
                     .WithMany(p => p.Assets)
                     .HasForeignKey(d => d.FolderId)
                     .OnDelete(DeleteBehavior.Cascade)
-                    .HasConstraintName("FK__Assets__FolderID__49C3F6B7");
+                    .HasConstraintName("FK__Assets__FolderID__440B1D61");
 
                 entity.HasOne(d => d.Type)
                     .WithMany(p => p.Assets)
                     .HasForeignKey(d => d.TypeId)
-                    .HasConstraintName("FK__Assets__TypeID__46E78A0C");
+                    .HasConstraintName("FK__Assets__TypeID__44FF419A");
             });
 
             modelBuilder.Entity<AssetLog>(entity =>
             {
                 entity.HasKey(e => e.LogId)
-                    .HasName("PK__AssetLog__5E5499A86B0556E0");
+                    .HasName("PK__AssetLog__5E5499A84A1D2905");
 
                 entity.Property(e => e.LogId).HasColumnName("LogID");
 
@@ -116,13 +108,13 @@ namespace AssetsManagerLibrary.Models
                     .WithMany(p => p.AssetLogs)
                     .HasForeignKey(d => d.AssetId)
                     .OnDelete(DeleteBehavior.Cascade)
-                    .HasConstraintName("FK__AssetLogs__Asset__4D94879B");
+                    .HasConstraintName("FK__AssetLogs__Asset__4AB81AF0");
             });
 
             modelBuilder.Entity<AssetPermission>(entity =>
             {
                 entity.HasKey(e => e.PermissionId)
-                    .HasName("PK__AssetPer__EFA6FB0F3AE2B35E");
+                    .HasName("PK__AssetPer__EFA6FB0FB311F562");
 
                 entity.Property(e => e.PermissionId).HasColumnName("PermissionID");
 
@@ -139,18 +131,18 @@ namespace AssetsManagerLibrary.Models
                 entity.HasOne(d => d.Asset)
                     .WithMany(p => p.AssetPermissions)
                     .HasForeignKey(d => d.AssetId)
-                    .HasConstraintName("FK__AssetPerm__Asset__5441852A");
+                    .HasConstraintName("FK__AssetPerm__Asset__5165187F");
 
                 entity.HasOne(d => d.Role)
                     .WithMany(p => p.AssetPermissions)
                     .HasForeignKey(d => d.RoleId)
-                    .HasConstraintName("FK__AssetPerm__RoleI__534D60F1");
+                    .HasConstraintName("FK__AssetPerm__RoleI__5070F446");
             });
 
             modelBuilder.Entity<AssetType>(entity =>
             {
                 entity.HasKey(e => e.TypeId)
-                    .HasName("PK__AssetTyp__516F0395D348E334");
+                    .HasName("PK__AssetTyp__516F0395775471F8");
 
                 entity.ToTable("AssetType");
 
@@ -169,7 +161,7 @@ namespace AssetsManagerLibrary.Models
             modelBuilder.Entity<CloudStorage>(entity =>
             {
                 entity.HasKey(e => e.CloudId)
-                    .HasName("PK__CloudSto__70A7EB8DD16F30B1");
+                    .HasName("PK__CloudSto__70A7EB8DA77AA8CD");
 
                 entity.ToTable("CloudStorage");
 
@@ -195,6 +187,14 @@ namespace AssetsManagerLibrary.Models
                     .HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.FolderName).HasMaxLength(100);
+
+                entity.Property(e => e.ProjectId).HasColumnName("ProjectID");
+
+                entity.HasOne(d => d.Project)
+                    .WithMany(p => p.Folders)
+                    .HasForeignKey(d => d.ProjectId)
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .HasConstraintName("FK__Folders__Project__3A81B327");
             });
 
             modelBuilder.Entity<Project>(entity =>
@@ -208,29 +208,12 @@ namespace AssetsManagerLibrary.Models
                 entity.Property(e => e.Path).HasMaxLength(255);
 
                 entity.Property(e => e.ProjectName).HasMaxLength(100);
-
-                entity.HasMany(d => d.Folders)
-                    .WithMany(p => p.Projects)
-                    .UsingEntity<Dictionary<string, object>>(
-                        "ProjectFolder",
-                        l => l.HasOne<Folder>().WithMany().HasForeignKey("FolderId").HasConstraintName("FK__ProjectFo__Folde__3E52440B"),
-                        r => r.HasOne<Project>().WithMany().HasForeignKey("ProjectId").HasConstraintName("FK__ProjectFo__Proje__3D5E1FD2"),
-                        j =>
-                        {
-                            j.HasKey("ProjectId", "FolderId").HasName("PK__ProjectF__9CD7CFD953C8BA0C");
-
-                            j.ToTable("ProjectFolders");
-
-                            j.IndexerProperty<int>("ProjectId").HasColumnName("ProjectID");
-
-                            j.IndexerProperty<int>("FolderId").HasColumnName("FolderID");
-                        });
             });
 
             modelBuilder.Entity<UserRole>(entity =>
             {
                 entity.HasKey(e => e.RoleId)
-                    .HasName("PK__UserRole__8AFACE3AB2056921");
+                    .HasName("PK__UserRole__8AFACE3AE0C46649");
 
                 entity.Property(e => e.RoleId).HasColumnName("RoleID");
 
